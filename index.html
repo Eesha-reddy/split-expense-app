@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Expense Splitter</title>
+</head>
+<body>
+    <h1>Split Wise</h1>
+    <div class="input-section">
+        <label for="enter-name">Name:</label>
+        <input type="text" id="enter-name">
+
+        <label for="category-select">Category:</label>
+        <select id="category-select">
+            <option value="Food and Dining">Food and Dining</option>
+            <option value="Accommodation">Accommodation</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Activities and Entertainment">Activities and Entertainment</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Miscellaneous">Miscellaneous</option>
+        </select>
+        <label for="amount-input">Amount:</label>
+        <input type="number" id="amount-input">
+        <label for="date-input">Date:</label>
+        <input type="date" id="date-input">
+        <button id="add-btn">Add</button>
+    </div>
+    <div class="expenses-list">
+        <h2>List of Expenses</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="expense-table-body">
+                <!-- Rows will be added here dynamically -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total:</td>
+                    <td id="total-amount"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="total-by-person">
+        <h2>Total Expenses by Person</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Total Amount</th>
+                </tr>
+            </thead>
+            <tbody id="total-by-person-table-body">
+                <!-- Rows will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
